@@ -1,0 +1,123 @@
+@prefix dean:  <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#> .
+@prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766> .
+@prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
+@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
+@prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f> .
+@prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#> .
+@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
+@prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#> .
+@prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699> .
+@prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113> .
+@prefix bob:   <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
+@prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
+@prefix bobg:  <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
+@prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
+
+mateig: a owl:Ontology .
+
+matei:Host  a   owl:Class .
+
+matei:Reader  a  owl:Class .
+
+matei:Participant  a  owl:Class .
+
+matei:Event  a  owl:Class .
+
+matei:mentionedBy  a  owl:ObjectProperty .
+
+matei:Section  a  owl:Class .
+
+matei:responseTo  a  owl:ObjectProperty .
+
+matei:partOf  a  owl:ObjectProperty .
+
+matei:response  a      owl:ObjectProperty ;
+        owl:inverseOf  matei:responseTo .
+
+matei:People  a  owl:Class .
+
+matei:Summary  a  owl:Class .
+
+matei:Exercise  a  owl:Class .
+
+matei:Viewer  a  owl:Class .
+
+matei:Session  a  owl:Class .
+
+matei:Author  a  owl:Class .
+
+matei:Organization  a  owl:Class .
+
+matei:EventSeries  a  owl:Class .
+
+matei:referenceBy  a   owl:ObjectProperty ;
+        owl:inverseOf  matei:referenceTo .
+
+matei:made  a   owl:ObjectProperty .
+
+matei:Chapter  a  owl:Class .
+
+matei:madeBy  a  owl:ObjectProperty .
+
+matei:Member  a  owl:Class .
+
+matei:Note  a   owl:Class .
+
+matei:Comment  a  owl:Class .
+
+matei:Concept  a  owl:Class .
+
+matei:Cohort  a  owl:Class .
+
+matei:Community  a  owl:Class .
+
+matei:Group  a  owl:Class .
+
+matei:Topic  a  owl:Class .
+
+matei:Club  a   owl:Class .
+
+matei:Page  a   owl:Class .
+
+matei:Quote  a  owl:Class .
+
+matei:hasAccessPolicy
+        a       owl:ObjectProperty .
+
+matei:Artifact  a  owl:Class .
+
+matei:Question  a  owl:Class .
+
+matei:Book  a   owl:Class .
+
+matei:Frame  a  owl:Class .
+
+matei:Image  a  owl:Class .
+
+matei:Sketch  a  owl:Class .
+
+matei:Resource  a  owl:Class .
+
+matei:Person  a  owl:Class .
+
+matei:mentions  a  owl:ObjectProperty .
+
+matei:Tool  a   owl:Class .
+
+matei:Thought  a  owl:Class .
+
+matei:Definition  a  owl:Class .
+
+matei:Discussion  a  owl:Class .
+
+matei:referenceTo  a  owl:ObjectProperty .
+
+matei:hasPart  a  owl:ObjectProperty .

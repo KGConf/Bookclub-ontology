@@ -1,0 +1,86 @@
+@prefix dean:  <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#> .
+@prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766> .
+@prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
+@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
+@prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f> .
+@prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#> .
+@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
+@prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#> .
+@prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699> .
+@prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113> .
+@prefix bob:   <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
+@prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
+@prefix bobg:  <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
+@prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
+
+robertg: a owl:Ontology .
+
+robert:Publisher  a  owl:Class .
+
+robert:Person  a  owl:Class .
+
+robert:Topic  a       owl:Class ;
+        rdfs:comment  " Discussed in section, meeting " .
+
+robert:Edition  a        owl:Class ;
+        rdfs:comment     "Or instance of class Book? " ;
+        rdfs:subClassOf  robert:Book .
+
+robert:BookClub  a    owl:Class ;
+        rdfs:comment  "Organized by Person(s); covers Domain " .
+
+robert:Book  a  owl:Class .
+
+robert:Perspective  a  owl:Class ;
+        rdfs:comment  "View on topic: contradicts or supports topic " .
+
+robert:Domain  a  owl:Class .
+
+robert:Publication  a  owl:Class ;
+        rdfs:comment  "Synonym of Edition? " .
+
+robert:LiveTool  a    owl:Class ;
+        rdfs:comment  " Type of tooling: tool that is accessible to the relevant people: e.g. to be able to run a Source Example " .
+
+robert:Mention  a     owl:Class ;
+        rdfs:comment  "Mentions Person, Book, Edition, Topic " .
+
+robert:SourceExample  a  owl:Class ;
+        rdfs:comment     "Tested on Live Tool " ;
+        rdfs:subClassOf  robert:Artifact .
+
+robert:Section  a        owl:Class ;
+        rdfs:subClassOf  robert:Chapter .
+
+robert:Meeting  a     owl:Class ;
+        rdfs:comment  " Discusses Topic " .
+
+robert:Author  a         owl:Class ;
+        rdfs:subClassOf  robert:Person .
+
+robert:Idea  a           owl:Class ;
+        rdfs:comment     "Part of Topic, e.g., 'Web Ontology Language' " ;
+        rdfs:subClassOf  robert:Topic .
+
+robert:Implementation
+        a                owl:Class ;
+        rdfs:comment     " Implements Idea, e.g. 'OWL v1.1'" ;
+        rdfs:subClassOf  robert:Idea .
+
+robert:Reference  a   owl:Class ;
+        rdfs:comment  "Type of Mention (more formal, registered with a public body?) " .
+
+robert:Artifact  a    owl:Class ;
+        rdfs:comment  "e.g. source code in github, thread in Q&A " .
+
+robert:Chapter  a        owl:Class ;
+        rdfs:comment     "Or part of Book?" ;
+        rdfs:subClassOf  robert:Edition .
