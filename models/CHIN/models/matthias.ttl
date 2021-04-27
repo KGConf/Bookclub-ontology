@@ -57,10 +57,10 @@ matthias:ask  a  owl:DatatypeProperty .
 
 matthias:Member  a  owl:Class .
 
-matthias:Tool  a  owl:Class .
-
 matthias:BookClub  a  owl:Class .
 
 matthias:Topic  a  owl:Class .
 
 matthias:_KGC_community  a  owl:NamedInstance .
+
+matthias:Tool  a  owl:Class .
