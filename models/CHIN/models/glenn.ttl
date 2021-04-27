@@ -129,7 +129,8 @@ glenn:Agent rdf:type owl:Class .
 
 
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Book
-glenn:Book rdf:type owl:Class .
+glenn:Book rdf:type owl:Class ;
+           rdfs:subClassOf glenn:Publication .
 
 
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Chapter
@@ -166,12 +167,12 @@ glenn:Person rdf:type owl:Class ;
              rdfs:subClassOf glenn:Agent .
 
 
+###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publication
+glenn:Publication rdf:type owl:Class .
+
+
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publication_Part
 glenn:Publication_Part rdf:type owl:Class .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publications
-glenn:Publications rdf:type owl:Class .
 
 
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publisher
