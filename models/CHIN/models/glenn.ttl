@@ -92,6 +92,10 @@ glenn:SWWOEd3
   rdf:type glenn:Edition ;
   rdfs:label "Semantic Web for the Working Ontologist Third Edition" ;
 .
+glenn:SWWOEd3Ch8
+  rdf:type glenn:Chapter ;
+  rdfs:label "Semantic Web for the Working Ontologist Third Edition Chapter 8" ;
+.
 glenn:Section
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Publication_Part ;
