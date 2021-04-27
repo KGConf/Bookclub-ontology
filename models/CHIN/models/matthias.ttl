@@ -59,7 +59,7 @@ matthias:Member  a  owl:Class .
 
 matthias:Tool  a  owl:Class .
 
-matthias:_KGC  a  owl:NamedInstance .
+matthias:_KGC_community  a  owl:NamedInstance .
 
 matthias:Topic  a  owl:Class .
 
