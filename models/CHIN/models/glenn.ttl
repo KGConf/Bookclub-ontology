@@ -65,10 +65,6 @@ glenn:Footnote
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Publication_Part ;
 .
-glenn:Hologram
-  rdf:type owl:Class ;
-  rdfs:subClassOf glenn:Publication_Part ;
-.
 glenn:James_Hendler
   rdf:type owl:NamedIndividual ;
   rdf:type glenn:Person ;
