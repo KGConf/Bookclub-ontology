@@ -1,268 +1,213 @@
+# baseURI: https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c
+# prefix: glenng
+
 @prefix : <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
 @prefix bob: <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <hg:ttp://www.w3.org/2001/XMLSchema#> .
 @prefix bobg: <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
 @prefix dean: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8> .
 @prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
-@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
-@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
-@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
 @prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
+@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
 @prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699> .
+@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
 @prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c> .
+@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
 @prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f> .
+@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
+@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#> .
 @prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766> .
 @prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#> .
-@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
 @prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113> .
-@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
-@base <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
-
-<https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> rdf:type owl:Ontology .
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  hg:ttp://www.w3.org/2001/XMLSchema#anyURI
-xsd:anyURI rdf:type rdfs:Datatype .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#authorOf
-glenn:authorOf rdf:type owl:ObjectProperty ;
-               owl:inverseOf glenn:hasAuthor ;
-               rdfs:domain glenn:Person ;
-               rdfs:range glenn:Edition ;
-               rdfs:label "author of" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasAuthor
-glenn:hasAuthor rdf:type owl:ObjectProperty ;
-                rdfs:domain glenn:Edition ;
-                rdfs:range glenn:Person .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasChapter
-glenn:hasChapter rdf:type owl:ObjectProperty ;
-                 rdfs:domain glenn:Edition ;
-                 rdfs:range glenn:Chapter .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasChapterSection
-glenn:hasChapterSection rdf:type owl:ObjectProperty ;
-                        rdfs:domain glenn:Chapter ;
-                        rdfs:range glenn:Section .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasChapterSubSection
-glenn:hasChapterSubSection rdf:type owl:ObjectProperty ;
-                           rdfs:domain glenn:Section ;
-                           rdfs:range glenn:SubSection .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasEdition
-glenn:hasEdition rdf:type owl:ObjectProperty ;
-                 rdfs:domain glenn:Book ;
-                 rdfs:range glenn:Edition .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasPublisher
-glenn:hasPublisher rdf:type owl:ObjectProperty ;
-                   owl:inverseOf glenn:publishes ;
-                   rdfs:domain glenn:Book ;
-                   rdfs:range glenn:Publisher .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasTopic
-glenn:hasTopic rdf:type owl:ObjectProperty ;
-               rdfs:range glenn:Topic .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasTopicInstance
-glenn:hasTopicInstance rdf:type owl:ObjectProperty ;
-                       rdfs:domain glenn:Section ,
-                                   glenn:SubSection .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#publishes
-glenn:publishes rdf:type owl:ObjectProperty ;
-                rdfs:label "publishes" .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasChapterSubtitle
-glenn:hasChapterSubtitle rdf:type owl:DatatypeProperty .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasChapterTitle
-glenn:hasChapterTitle rdf:type owl:DatatypeProperty .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasName
-glenn:hasName rdf:type owl:DatatypeProperty .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#hasURI
-glenn:hasURI rdf:type owl:DatatypeProperty ;
-             rdfs:label "has URI" .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Agent
-glenn:Agent rdf:type owl:Class .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Book
-glenn:Book rdf:type owl:Class ;
-           rdfs:subClassOf glenn:Publication .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Chapter
-glenn:Chapter rdf:type owl:Class ;
-              rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Edition
-glenn:Edition rdf:type owl:Class ;
-              rdfs:subClassOf glenn:Book .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Figure
-glenn:Figure rdf:type owl:Class ;
-             rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Footnote
-glenn:Footnote rdf:type owl:Class ;
-               rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Mention
-glenn:Mention rdf:type owl:Class .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Organization
-glenn:Organization rdf:type owl:Class ;
-                   rdfs:subClassOf glenn:Agent .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Person
-glenn:Person rdf:type owl:Class ;
-             rdfs:subClassOf glenn:Agent .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publication
-glenn:Publication rdf:type owl:Class .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publication_Part
-glenn:Publication_Part rdf:type owl:Class .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Publisher
-glenn:Publisher rdf:type owl:Class ;
-                rdfs:subClassOf glenn:Organization .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Question
-glenn:Question rdf:type owl:Class ;
-               rdfs:subClassOf owl:Thing ;
-               rdfs:label "Question" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Reference
-glenn:Reference rdf:type owl:Class ;
-                rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Section
-glenn:Section rdf:type owl:Class ;
-              rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Sidebar
-glenn:Sidebar rdf:type owl:Class ;
-              rdfs:subClassOf glenn:Publication_Part ;
-              rdfs:label "Sidebar" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#SubSection
-glenn:SubSection rdf:type owl:Class ;
-                 rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Table
-glenn:Table rdf:type owl:Class ;
-            rdfs:subClassOf glenn:Publication_Part .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Topic
-glenn:Topic rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Dean_Allemang
-glenn:Dean_Allemang rdf:type owl:NamedIndividual ,
-                             glenn:Person ;
-                    rdfs:label "Dean Allemang" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Fabien_Gandon
-glenn:Fabien_Gandon rdf:type owl:NamedIndividual ,
-                             glenn:Person ;
-                    glenn:authorOf glenn:SWWOEd3 ;
-                    rdfs:label "Fabien Gandon" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#James_Hendler
-glenn:James_Hendler rdf:type owl:NamedIndividual ,
-                             glenn:Person ;
-                    glenn:authorOf glenn:SWWOEd3 ;
-                    rdfs:label "James Hendler" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Morgan_Claypool_Publishers
-glenn:Morgan_Claypool_Publishers rdf:type owl:NamedIndividual ,
-                                          glenn:Publisher ;
-                                 rdfs:label "Morgan Claypool Publishers" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#SWWOEd03Ch08Q1
-glenn:SWWOEd03Ch08Q1 rdf:type owl:NamedIndividual ,
-                              glenn:Question ;
-                     glenn:hasURI "https://github.com/Semantic-Web-Working-Ontologist/KGCBookClub/wiki/Chapter-8"^^xsd:anyURI ;
-                     rdfs:label "SWWO Third Edition Chapter 08 Question 1" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#SWWOEd3
-glenn:SWWOEd3 rdf:type owl:NamedIndividual ,
-                       glenn:Edition ;
-              rdfs:label "Semantic Web for the Working Ontologist Third Edition" .
-
-
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#SWWOEd3Ch8
-glenn:SWWOEd3Ch8 rdf:type owl:NamedIndividual ,
-                          glenn:Chapter ;
-                 rdfs:label "Semantic Web for the Working Ontologist Third Edition Chapter 8" .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <hg:ttp://www.w3.org/2001/XMLSchema#> .
+
+xsd:anyURI
+  rdf:type rdfs:Datatype ;
+.
+<https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c>
+  rdf:type owl:Ontology ;
+.
+glenn:Agent
+  rdf:type owl:Class ;
+.
+glenn:Book
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication ;
+.
+glenn:Chapter
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:Dean_Allemang
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Person ;
+  rdfs:label "Dean Allemang" ;
+.
+glenn:Edition
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Book ;
+.
+glenn:Fabien_Gandon
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Person ;
+  rdfs:label "Fabien Gandon" ;
+  glenn:authorOf glenn:SWWOEd3 ;
+.
+glenn:Figure
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:Footnote
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:James_Hendler
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Person ;
+  rdfs:label "James Hendler" ;
+  glenn:authorOf glenn:SWWOEd3 ;
+.
+glenn:John_Smith
+  rdf:type glenn:Agent ;
+  rdfs:label "John Smith" ;
+.
+glenn:Mention
+  rdf:type owl:Class ;
+.
+glenn:Morgan_Claypool_Publishers
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Publisher ;
+  rdfs:label "Morgan Claypool Publishers" ;
+.
+glenn:Organization
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Agent ;
+.
+glenn:Person
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Agent ;
+.
+glenn:Publication
+  rdf:type owl:Class ;
+.
+glenn:Publication_Part
+  rdf:type owl:Class ;
+.
+glenn:Publisher
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Organization ;
+.
+glenn:Question
+  rdf:type owl:Class ;
+  rdfs:label "Question" ;
+  rdfs:subClassOf owl:Thing ;
+.
+glenn:Reference
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:SWWOEd03Ch08Q1
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Question ;
+  rdfs:label "SWWO Third Edition Chapter 08 Question 1" ;
+  glenn:hasURI "https://github.com/Semantic-Web-Working-Ontologist/KGCBookClub/wiki/Chapter-8"^^xsd:anyURI ;
+.
+glenn:SWWOEd3
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Edition ;
+  rdfs:label "Semantic Web for the Working Ontologist Third Edition" ;
+.
+glenn:SWWOEd3Ch8
+  rdf:type owl:NamedIndividual ;
+  rdf:type glenn:Chapter ;
+  rdfs:label "Semantic Web for the Working Ontologist Third Edition Chapter 8" ;
+.
+glenn:Section
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:Sidebar
+  rdf:type owl:Class ;
+  rdfs:label "Sidebar" ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:SubSection
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:Table
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:Topic
+  rdf:type owl:Class ;
+.
+glenn:authorOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Person ;
+  rdfs:label "author of" ;
+  rdfs:range glenn:Edition ;
+  owl:inverseOf glenn:hasAuthor ;
+.
+glenn:hasAuthor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Edition ;
+  rdfs:range glenn:Person ;
+.
+glenn:hasChapter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Edition ;
+  rdfs:range glenn:Chapter ;
+.
+glenn:hasChapterSection
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Chapter ;
+  rdfs:range glenn:Section ;
+.
+glenn:hasChapterSubSection
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Section ;
+  rdfs:range glenn:SubSection ;
+.
+glenn:hasChapterSubtitle
+  rdf:type owl:DatatypeProperty ;
+.
+glenn:hasChapterTitle
+  rdf:type owl:DatatypeProperty ;
+.
+glenn:hasEdition
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Book ;
+  rdfs:range glenn:Edition ;
+.
+glenn:hasName
+  rdf:type owl:DatatypeProperty ;
+.
+glenn:hasPublisher
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Book ;
+  rdfs:range glenn:Publisher ;
+  owl:inverseOf glenn:publishes ;
+.
+glenn:hasTopic
+  rdf:type owl:ObjectProperty ;
+  rdfs:range glenn:Topic ;
+.
+glenn:hasTopicInstance
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain glenn:Section ;
+  rdfs:domain glenn:SubSection ;
+.
+glenn:hasURI
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has URI" ;
+.
+glenn:publishes
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "publishes" ;
+.
