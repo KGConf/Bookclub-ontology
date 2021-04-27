@@ -61,6 +61,6 @@ matthias:Tool  a  owl:Class .
 
 matthias:_KGC_community  a  owl:NamedInstance .
 
-matthias:Topic  a  owl:Class .
-
 matthias:BookClub  a  owl:Class .
+
+matthias:Topic  a  owl:Class .
