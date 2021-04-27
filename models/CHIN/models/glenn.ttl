@@ -126,8 +126,9 @@ glenn:Section
   rdfs:subClassOf glenn:Publication_Part ;
 .
 glenn:Sidebar
-  rdf:type glenn:Publication_Part ;
+  rdf:type owl:Class ;
   rdfs:label "Sidebar" ;
+  rdfs:subClassOf glenn:Publication_Part ;
 .
 glenn:SubSection
   rdf:type owl:Class ;
