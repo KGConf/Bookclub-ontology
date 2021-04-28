@@ -233,10 +233,6 @@ glenn:Fabien_Gandon rdf:type owl:NamedIndividual ,
                     rdfs:label "Fabien Gandon" .
 
 
-###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Guy_Smiley
-glenn:Guy_Smiley rdf:type owl:NamedIndividual .
-
-
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#James_Hendler
 glenn:James_Hendler rdf:type owl:NamedIndividual ,
                              glenn:Person ;
