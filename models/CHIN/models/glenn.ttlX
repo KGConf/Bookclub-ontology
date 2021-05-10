@@ -1,0 +1,266 @@
+@prefix : <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
+@prefix bob: <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
+@prefix bobg: <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
+@prefix dean: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#> .
+@prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8> .
+@prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
+@prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
+@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
+@prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699> .
+@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
+@prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c> .
+@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
+@prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f> .
+@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
+@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#> .
+@prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766> .
+@prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#> .
+@prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <hg:ttp://www.w3.org/2001/XMLSchema#> .
+
+<https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c>
+	a owl:Ontology ;
+	.
+
+xsd:anyURI
+	a rdfs:Datatype ;
+	.
+
+glenn:Agent
+	a owl:Class ;
+	.
+
+glenn:Book
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication ;
+	.
+
+glenn:Chapter
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:Dean_Allemang
+	a
+		owl:NamedIndividual ,
+		glenn:Person
+		;
+	rdfs:label "Dean Allemang" ;
+	glenn:authorOf glenn:SWWOEd3 ;
+	.
+
+glenn:Edition
+	a owl:Class ;
+	rdfs:subClassOf glenn:Book ;
+	.
+
+glenn:Fabien_Gandon
+	a
+		owl:NamedIndividual ,
+		glenn:Person
+		;
+	rdfs:label "Fabien Gandon" ;
+	glenn:authorOf glenn:SWWOEd3 ;
+	.
+
+glenn:Figure
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:Footnote
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:James_Hendler
+	a
+		owl:NamedIndividual ,
+		glenn:Person
+		;
+	rdfs:label "James Hendler" ;
+	glenn:authorOf glenn:SWWOEd3 ;
+	.
+
+glenn:Mention
+	a owl:Class ;
+	.
+
+glenn:Morgan_Claypool_Publishers
+	a
+		owl:NamedIndividual ,
+		glenn:Publisher
+		;
+	rdfs:label "Morgan Claypool Publishers" ;
+	.
+
+glenn:Organization
+	a owl:Class ;
+	rdfs:subClassOf glenn:Agent ;
+	.
+
+glenn:Person
+	a owl:Class ;
+	rdfs:subClassOf glenn:Agent ;
+	.
+
+glenn:Publication
+	a owl:Class ;
+	.
+
+glenn:Publication_Part
+	a owl:Class ;
+	.
+
+glenn:Publisher
+	a owl:Class ;
+	rdfs:subClassOf glenn:Organization ;
+	.
+
+glenn:Question
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:label "Question" ;
+	.
+
+glenn:Reference
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:SWWOEd03Ch08Q1
+	a
+		owl:NamedIndividual ,
+		glenn:Question
+		;
+	rdfs:label "SWWO Third Edition Chapter 08 Question 1" ;
+	glenn:hasURI "https://github.com/Semantic-Web-Working-Ontologist/KGCBookClub/wiki/Chapter-8"^^xsd:anyURI ;
+	.
+
+glenn:SWWOEd3
+	a
+		owl:NamedIndividual ,
+		glenn:Edition
+		;
+	rdfs:label "Semantic Web for the Working Ontologist Third Edition" ;
+	.
+
+glenn:SWWOEd3Ch8
+	a
+		owl:NamedIndividual ,
+		glenn:Chapter
+		;
+	rdfs:label "Semantic Web for the Working Ontologist Third Edition Chapter 8" ;
+	.
+
+glenn:Section
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:Sidebar
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	rdfs:label "Sidebar" ;
+	.
+
+glenn:SubSection
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:Table
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:Topic
+	a owl:Class ;
+	.
+
+glenn:authorOf
+	a owl:ObjectProperty ;
+	rdfs:label "author of" ;
+	rdfs:domain glenn:Person ;
+	rdfs:range glenn:Edition ;
+	owl:inverseOf glenn:hasAuthor ;
+	.
+
+glenn:hasAuthor
+	a owl:ObjectProperty ;
+	rdfs:domain glenn:Edition ;
+	rdfs:range glenn:Person ;
+	.
+
+glenn:hasChapter
+	a owl:ObjectProperty ;
+	rdfs:domain glenn:Edition ;
+	rdfs:range glenn:Chapter ;
+	.
+
+glenn:hasChapterSection
+	a owl:ObjectProperty ;
+	rdfs:domain glenn:Chapter ;
+	rdfs:range glenn:Section ;
+	.
+
+glenn:hasChapterSubSection
+	a owl:ObjectProperty ;
+	rdfs:domain glenn:Section ;
+	rdfs:range glenn:SubSection ;
+	.
+
+glenn:hasChapterSubtitle
+	a owl:DatatypeProperty ;
+	.
+
+glenn:hasChapterTitle
+	a owl:DatatypeProperty ;
+	.
+
+glenn:hasEdition
+	a owl:ObjectProperty ;
+	rdfs:domain glenn:Book ;
+	rdfs:range glenn:Edition ;
+	.
+
+glenn:hasName
+	a owl:DatatypeProperty ;
+	.
+
+glenn:hasPublisher
+	a owl:ObjectProperty ;
+	rdfs:domain glenn:Book ;
+	rdfs:range glenn:Publisher ;
+	owl:inverseOf glenn:publishes ;
+	.
+
+glenn:hasTopic
+	a owl:ObjectProperty ;
+	rdfs:range glenn:Topic ;
+	.
+
+glenn:hasTopicInstance
+	a owl:ObjectProperty ;
+	rdfs:domain
+		glenn:Section ,
+		glenn:SubSection
+		;
+	.
+
+glenn:hasURI
+	a owl:DatatypeProperty ;
+	rdfs:label "has URI" ;
+	.
+
+glenn:publishes
+	a owl:ObjectProperty ;
+	rdfs:label "publishes" ;
+	.
+

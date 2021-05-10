@@ -223,6 +223,7 @@ glenn:Topic rdf:type owl:Class .
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Dean_Allemang
 glenn:Dean_Allemang rdf:type owl:NamedIndividual ,
                              glenn:Person ;
+                    glenn:authorOf glenn:SWWOEd3 ;
                     rdfs:label "Dean Allemang" .
 
 
