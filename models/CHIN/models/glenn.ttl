@@ -90,6 +90,11 @@ glenn:Person
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Agent ;
 .
+glenn:PostItNote
+  rdf:type owl:Class ;
+  rdfs:label "Post it note" ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
 glenn:Publication
   rdf:type owl:Class ;
 .
