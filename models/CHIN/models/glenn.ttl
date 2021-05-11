@@ -67,6 +67,11 @@ glenn:Footnote
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Publication_Part ;
 .
+glenn:Image
+  rdf:type owl:Class ;
+  rdfs:label "Image" ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
 glenn:James_Hendler
   rdf:type owl:NamedIndividual ;
   rdf:type glenn:Person ;
