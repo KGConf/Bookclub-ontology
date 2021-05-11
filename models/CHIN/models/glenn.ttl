@@ -37,6 +37,7 @@ glenn:Agent
 .
 glenn:Book
   rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication ;
 .
 glenn:Chapter
   rdf:type owl:Class ;
@@ -46,6 +47,7 @@ glenn:Dean_Allemang
   rdf:type owl:NamedIndividual ;
   rdf:type glenn:Person ;
   rdfs:label "Dean Allemang" ;
+  glenn:authorOf glenn:SWWOEd3 ;
 .
 glenn:Edition
   rdf:type owl:Class ;
@@ -65,6 +67,11 @@ glenn:Footnote
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Publication_Part ;
 .
+glenn:Image
+  rdf:type owl:Class ;
+  rdfs:label "Image" ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
 glenn:James_Hendler
   rdf:type owl:NamedIndividual ;
   rdf:type glenn:Person ;
@@ -73,6 +80,7 @@ glenn:James_Hendler
 .
 glenn:Mention
   rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
 .
 glenn:Morgan_Claypool_Publishers
   rdf:type owl:NamedIndividual ;
@@ -87,10 +95,10 @@ glenn:Person
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Agent ;
 .
-glenn:Publication_Part
+glenn:Publication
   rdf:type owl:Class ;
 .
-glenn:Publications
+glenn:Publication_Part
   rdf:type owl:Class ;
 .
 glenn:Publisher
@@ -104,6 +112,7 @@ glenn:Question
 .
 glenn:Reference
   rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
 .
 glenn:SWWOEd03Ch08Q1
   rdf:type owl:NamedIndividual ;
@@ -131,6 +140,10 @@ glenn:Sidebar
   rdfs:subClassOf glenn:Publication_Part ;
 .
 glenn:SubSection
+  rdf:type owl:Class ;
+  rdfs:subClassOf glenn:Publication_Part ;
+.
+glenn:Table
   rdf:type owl:Class ;
   rdfs:subClassOf glenn:Publication_Part ;
 .
