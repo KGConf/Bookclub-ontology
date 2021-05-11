@@ -79,9 +79,9 @@ matei:Cohort  a  owl:Class .
 
 matei:Community  a  owl:Class .
 
-matei:Group  a  owl:Class .
-
 matei:Topic  a  owl:Class .
+
+matei:Group  a  owl:Class .
 
 matei:Club  a   owl:Class .
 
