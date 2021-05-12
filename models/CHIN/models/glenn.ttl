@@ -153,6 +153,11 @@ glenn:Footnote rdf:type owl:Class ;
                rdfs:subClassOf glenn:Publication_Part .
 
 
+###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Image
+glenn:Image rdf:type owl:Class ;
+            rdfs:subClassOf glenn:Publication_Part .
+
+
 ###  https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#Mention
 glenn:Mention rdf:type owl:Class ;
               rdfs:subClassOf glenn:Publication_Part .
