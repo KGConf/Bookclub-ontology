@@ -49,6 +49,11 @@ glenn:Chapter
 	rdfs:subClassOf glenn:Publication_Part ;
 	.
 
+glenn:Citation
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
 glenn:Dean_Allemang
 	a
 		owl:NamedIndividual ,
@@ -98,7 +103,7 @@ glenn:James_Hendler
 
 glenn:Mention
 	a owl:Class ;
-	rdfs:subClassOf glenn:Publication_Part ;
+	rdfs:subClassOf glenn:Citation ;
 	.
 
 glenn:Morgan_Claypool_Publishers
@@ -136,11 +141,6 @@ glenn:Question
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Question" ;
-	.
-
-glenn:Reference
-	a owl:Class ;
-	rdfs:subClassOf glenn:Publication_Part ;
 	.
 
 glenn:SWWOEd03Ch08Q1
@@ -237,6 +237,11 @@ glenn:hasEdition
 	a owl:ObjectProperty ;
 	rdfs:domain glenn:Book ;
 	rdfs:range glenn:Edition ;
+	.
+
+glenn:hasLOCref
+	a owl:ObjectProperty ;
+	rdfs:label "Has Library of Congress reference"^^xs:anyURI ;
 	.
 
 glenn:hasName
