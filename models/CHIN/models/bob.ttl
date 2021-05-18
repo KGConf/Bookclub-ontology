@@ -86,13 +86,9 @@ bob:SubChapter
 	rdfs:subClassOf bob:Chapter ;
 	.
 
-bob:Subchapter
-	a owl:Class ;
-	.
-
 bob:SummarySection
 	a owl:Class ;
-	rdfs:subClassOf bob:Subchapter ;
+	rdfs:subClassOf bob:SubChapter ;
 	.
 
 bob:hasHardCoverISBN
