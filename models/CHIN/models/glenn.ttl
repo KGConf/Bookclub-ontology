@@ -143,6 +143,11 @@ glenn:Question
 	rdfs:label "Question" ;
 	.
 
+glenn:Reference
+	a owl:Class ;
+	rdfs:subClassOf glenn:Citation ;
+	.
+
 glenn:SWWOEd03Ch08Q1
 	a
 		owl:NamedIndividual ,
