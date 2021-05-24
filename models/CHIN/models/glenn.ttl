@@ -35,6 +35,14 @@ xsd:anyURI
 	a rdfs:Datatype ;
 	.
 
+owl:topObjectProperty
+	rdfs:range [
+		a owl:Restriction ;
+		owl:onProperty glenn:askedBy ;
+		owl:someValuesFrom glenn:Person ;
+	] ;
+	.
+
 glenn:Agent
 	a owl:Class ;
 	.
@@ -68,6 +76,11 @@ glenn:Edition
 	rdfs:subClassOf glenn:Book ;
 	.
 
+glenn:Electronic
+	a owl:Class ;
+	rdfs:subClassOf glenn:Format ;
+	.
+
 glenn:Fabien_Gandon
 	a
 		owl:NamedIndividual ,
@@ -85,6 +98,10 @@ glenn:Figure
 glenn:Footnote
 	a owl:Class ;
 	rdfs:subClassOf glenn:Publication_Part ;
+	.
+
+glenn:Format
+	a owl:Class ;
 	.
 
 glenn:Image
@@ -122,6 +139,11 @@ glenn:Organization
 glenn:Person
 	a owl:Class ;
 	rdfs:subClassOf glenn:Agent ;
+	.
+
+glenn:Print
+	a owl:Class ;
+	rdfs:subClassOf glenn:Format ;
 	.
 
 glenn:Publication
@@ -196,6 +218,11 @@ glenn:Table
 
 glenn:Topic
 	a owl:Class ;
+	.
+
+glenn:askedBy
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
 	.
 
 glenn:authorOf
