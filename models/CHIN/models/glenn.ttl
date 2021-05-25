@@ -168,6 +168,25 @@ glenn:Question
 	a owl:Class ;
 	rdfs:subClassOf owl:Thing ;
 	rdfs:label "Question" ;
+	owl:equivalentClass
+		[
+			a owl:Restriction ;
+			owl:onProperty glenn:hasAnswerURI ;
+			owl:minQualifiedCardinality "0"^^xs:nonNegativeInteger ;
+			owl:onDataRange xsd:anyURI ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty glenn:hasTopic ;
+			owl:onClass glenn:Question ;
+			owl:qualifiedCardinality "1"^^xs:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty glenn:hasQuestionURI ;
+			owl:someValuesFrom xsd:anyURI ;
+		]
+		;
 	.
 
 glenn:Reference
@@ -181,7 +200,6 @@ glenn:SWWOEd03Ch08Q1
 		glenn:Question
 		;
 	rdfs:label "SWWO Third Edition Chapter 08 Question 1" ;
-	glenn:hasURI "https://github.com/Semantic-Web-Working-Ontologist/KGCBookClub/wiki/Chapter-8"^^xsd:anyURI ;
 	.
 
 glenn:SWWOEd3
@@ -243,6 +261,11 @@ glenn:authorOf
 	owl:inverseOf glenn:hasAuthor ;
 	.
 
+glenn:hasAnswerURI
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	.
+
 glenn:hasAuthor
 	a owl:ObjectProperty ;
 	rdfs:domain glenn:Edition ;
@@ -283,7 +306,7 @@ glenn:hasEdition
 
 glenn:hasLOCref
 	a owl:ObjectProperty ;
-	rdfs:label "Has Library of Congress reference"^^xs:anyURI ;
+	rdfs:label "Has Library of Congress reference"@en ;
 	.
 
 glenn:hasName
@@ -297,6 +320,11 @@ glenn:hasPublisher
 	owl:inverseOf glenn:publishes ;
 	.
 
+glenn:hasQuestionURI
+	a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty ;
+	.
+
 glenn:hasTopic
 	a owl:ObjectProperty ;
 	rdfs:range glenn:Topic ;
@@ -308,11 +336,6 @@ glenn:hasTopicInstance
 		glenn:Section ,
 		glenn:SubSection
 		;
-	.
-
-glenn:hasURI
-	a owl:DatatypeProperty ;
-	rdfs:label "has URI" ;
 	.
 
 glenn:publishes
