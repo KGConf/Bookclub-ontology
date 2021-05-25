@@ -1,0 +1,51 @@
+# baseURI: http://www.kgc.org/ontologies/2021/Bookclub
+
+@base <http://www.kgc.org/ontologies/2021/Bookclub> .
+@prefix : <http://www.kgc.org/ontologies/2021/Bookclub#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.kgc.org/ontologies/2021/Bookclub>
+	a owl:Ontology ;
+	owl:versionIRI <0.0> ;
+	.
+
+:Book
+	a owl:Class ;
+	.
+
+:DOI
+	a owl:Class ;
+	rdfs:subClassOf :ID ;
+	.
+
+:Edition
+	a owl:Class ;
+	rdfs:subClassOf :Book ;
+	.
+
+:ID
+	a owl:Class ;
+	.
+
+:ISBN
+	a owl:Class ;
+	rdfs:subClassOf :ID ;
+	.
+
+:Publication
+	a owl:Class ;
+	.
+
+:Publisher
+	a owl:Class ;
+	.
+
+:SSN
+	a owl:Class ;
+	rdfs:subClassOf :ID ;
+	.
+
