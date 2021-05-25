@@ -47,6 +47,11 @@ glenn:Agent
 	a owl:Class ;
 	.
 
+glenn:Article
+	a owl:Class ;
+	rdfs:subClassOf glenn:Website ;
+	.
+
 glenn:Book
 	a owl:Class ;
 	rdfs:subClassOf glenn:Publication ;
