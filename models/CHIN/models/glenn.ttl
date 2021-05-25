@@ -220,6 +220,11 @@ glenn:Topic
 	a owl:Class ;
 	.
 
+glenn:Website
+	a owl:Class ;
+	rdfs:subClassOf glenn:Publication ;
+	.
+
 glenn:askedBy
 	a owl:ObjectProperty ;
 	rdfs:subPropertyOf owl:topObjectProperty ;
