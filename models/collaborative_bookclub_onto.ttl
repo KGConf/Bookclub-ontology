@@ -10,10 +10,18 @@
 
 <http://www.kgc.org/ontologies/2021/Bookclub>
 	a owl:Ontology ;
-	owl:versionIRI <0.0> ;
+	owl:versionIRI <http://www.kgc.org/ontologies/2021/0.0> ;
+	.
+
+:Audience
+	a owl:Class ;
 	.
 
 :Book
+	a owl:Class ;
+	.
+
+:ContentStucturalComponent
 	a owl:Class ;
 	.
 
@@ -33,11 +41,27 @@
 
 :ISBN
 	a owl:Class ;
-	rdfs:subClassOf :ID ;
+	rdfs:subClassOf
+		:ID ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :identifies ;
+			owl:allValuesFrom :Publication ;
+		]
+		;
+	.
+
+:Intend
+	a owl:Class ;
+	.
+
+:Manuscript
+	a owl:Class ;
 	.
 
 :Publication
 	a owl:Class ;
+	rdfs:comment "Something that is distributed by a Publisher. Each format are a different Publication (e.g., PDF, Paperback, Hardcover ...) and. Each publication is identified by an ISBN."@en ;
 	.
 
 :Publisher
@@ -47,5 +71,22 @@
 :SSN
 	a owl:Class ;
 	rdfs:subClassOf :ID ;
+	.
+
+:Topic
+	a owl:Class ;
+	.
+
+:identifiedBy
+	a owl:ObjectProperty ;
+	owl:inverseOf :identifies ;
+	.
+
+:identifies
+	a owl:ObjectProperty ;
+	.
+
+:publishedBy
+	a owl:ObjectProperty ;
 	.
 
