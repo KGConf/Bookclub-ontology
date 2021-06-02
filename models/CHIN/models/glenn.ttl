@@ -184,7 +184,8 @@ glenn:Question
 		[
 			a owl:Restriction ;
 			owl:onProperty glenn:hasQuestionURI ;
-			owl:someValuesFrom xsd:anyURI ;
+			owl:onDataRange xsd:anyURI ;
+			owl:qualifiedCardinality "1"^^xs:nonNegativeInteger ;
 		]
 		;
 	.
