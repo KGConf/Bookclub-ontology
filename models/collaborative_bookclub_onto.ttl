@@ -121,6 +121,15 @@
 	rdfs:subClassOf :ContentStucturalComponent ;
 	.
 
+:CommunicatingwithData
+	a
+		owl:NamedIndividual ,
+		:Section
+		;
+	rdfs:label "Communicating with Data" ;
+	:isPartOf :WhatIstheSemanticWeb ;
+	.
+
 :ContentStucturalComponent
 	a owl:Class ;
 	.
@@ -323,6 +332,22 @@
 
 :Topic
 	a owl:Class ;
+	.
+
+:WhatIsaWeb
+	a
+		owl:NamedIndividual ,
+		:Section
+		;
+	rdfs:label "What Is a Web"@en ;
+	.
+
+:WhatIstheSemanticWeb
+	a
+		owl:NamedIndividual ,
+		:Chapter
+		;
+	rdfs:label "What Is the Semantic Web"@en ;
 	.
 
 :broadcastedAs
