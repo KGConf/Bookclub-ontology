@@ -6,4 +6,4 @@ The plan is to bring together KGC Book Club members with diverse perspectives an
 
 The broader goal of the project is to produce artifacts that are accessible to a wider audience looking to understand Semantic Web standards and their relation to Knowledge Graph technologies.
 
-
+Our first use case / competency question to consider is "Where in the book is concept X discussed?"
