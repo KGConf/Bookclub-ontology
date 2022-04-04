@@ -73,6 +73,7 @@
 
 :Book
 	a owl:Class ;
+	rdfs:subClassOf :Publication ;
 	.
 
 :BookPart
@@ -241,6 +242,13 @@
 	a owl:Class ;
 	.
 
+:Issue
+	a owl:Class ;
+	rdfs:subClassOf :Periodical ;
+	rdfs:label "Issue"@en ;
+	rdfs:comment "One in a sequence of publications of a periodical (e.g. weekly, bi-weekly, monthly, quarterly, annual, etc.)"@en ;
+	.
+
 :Manuscript
 	a owl:Class ;
 	rdfs:subClassOf :CreativeWork ;
@@ -250,6 +258,13 @@
 :Paragraph
 	a owl:Class ;
 	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:Periodical
+	a owl:Class ;
+	rdfs:subClassOf :Publication ;
+	rdfs:label "Periodical"@en ;
+	rdfs:comment "A magazine, journal, newsletter, or newspaper published at regular intervals."@en ;
 	.
 
 :Preface
