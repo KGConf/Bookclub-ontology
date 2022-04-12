@@ -1,0 +1,56 @@
+@prefix dean:  <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#> .
+@prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766> .
+@prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
+@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
+@prefix xsd:   <hg:ttp://www.w3.org/2001/XMLSchema#> .
+@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
+@prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f> .
+@prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#> .
+@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
+@prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#> .
+@prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699> .
+@prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113> .
+@prefix bob:   <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
+@prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
+@prefix bobg:  <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
+@prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
+
+larryg: a owl:Ontology .
+
+larry:Publications  a  owl:Class .
+
+larry:Terms  a  owl:Class .
+
+larry:Methods  a  owl:Class .
+
+larry:AcademicFields  a  owl:Class .
+
+larry:Protocols  a  owl:Class .
+
+larry:Experts  a  owl:Class .
+
+larry:Book  a   owl:Class .
+
+larry:Resources  a  owl:Class .
+
+larry:Tools  a  owl:Class .
+
+larry:Standards  a  owl:Class .
+
+larry:Topics  a  owl:Class .
+
+larry:Author  a  owl:Class .
+
+larry:Organizations  a  owl:Class .
+
+larry:Practices  a  owl:Class .
+
+larry:Techniques  a  owl:Class .
+
+larry:Formats  a  owl:Class .

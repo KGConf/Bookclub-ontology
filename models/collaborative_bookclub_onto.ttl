@@ -1,0 +1,425 @@
+# baseURI: http://www.kgc.org/ontologies/2021/Bookclub
+
+@base <http://www.kgc.org/ontologies/2021/Bookclub> .
+@prefix : <http://www.kgc.org/ontologies/2021/Bookclub#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.kgc.org/ontologies/2021/Bookclub>
+	a owl:Ontology ;
+	owl:versionIRI <http://www.kgc.org/ontologies/2021/0.0> ;
+	.
+
+:Acknowledgement
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Audience
+	a owl:Class ;
+	.
+
+:AuthorBio
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Bibliography
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Book
+	a owl:Class ;
+	rdfs:subClassOf :Publication ;
+	.
+
+:BookPart
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Chapter
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom [
+				a owl:Class ;
+				owl:unionOf (
+					:Book
+					:BookPart
+				) ;
+			] ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Citation
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:CommunicatingwithData
+	a
+		owl:NamedIndividual ,
+		:Section
+		;
+	rdfs:label "Communicating with Data" ;
+	:isPartOf :WhatIstheSemanticWeb ;
+	.
+
+:ContentStucturalComponent
+	a owl:Class ;
+	.
+
+:CreativeWork
+	a owl:Class ;
+	rdfs:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty :manifestedAs ;
+		owl:allValuesFrom :Publication ;
+	] ;
+	.
+
+:DOI
+	a owl:Class ;
+	rdfs:subClassOf
+		:ID ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :identifies ;
+			owl:allValuesFrom :Manuscript ;
+		]
+		;
+	.
+
+:Edition
+	a owl:Class ;
+	rdfs:subClassOf :Book ;
+	.
+
+:Example
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:Exercise
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:Figure
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:Footnote
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:Foreword
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:ID
+	a owl:Class ;
+	.
+
+:ISBN
+	a owl:Class ;
+	rdfs:subClassOf
+		:ID ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :identifies ;
+			owl:allValuesFrom :Publication ;
+		]
+		;
+	.
+
+:ISSN
+	a owl:Class ;
+	rdfs:subClassOf :ID ;
+	.
+
+:Index
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Intend
+	a owl:Class ;
+	.
+
+:Issue
+	a owl:Class ;
+	rdfs:subClassOf :Periodical ;
+	rdfs:label "Issue"@en ;
+	rdfs:comment "One in a sequence of publications of a periodical (e.g. weekly, bi-weekly, monthly, quarterly, annual, etc.)"@en ;
+	.
+
+:Manuscript
+	a owl:Class ;
+	rdfs:subClassOf :CreativeWork ;
+	rdfs:comment "A Manuscript is the \"string\" that represent the 'thing\" (Publication)"@en ;
+	.
+
+:Paragraph
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:Periodical
+	a owl:Class ;
+	rdfs:subClassOf :Publication ;
+	rdfs:label "Periodical"@en ;
+	rdfs:comment "A magazine, journal, newsletter, or newspaper published at regular intervals."@en ;
+	.
+
+:Preface
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Printing
+	a owl:Class ;
+	rdfs:subClassOf :Manuscript ;
+	.
+
+:Publication
+	a owl:Class ;
+	rdfs:comment "Something that is distributed by a Publisher. Each format are a different Publication (e.g., PDF, Paperback, Hardcover ...) and. Each publication is identified by an ISBN."@en ;
+	.
+
+:Publisher
+	a owl:Class ;
+	.
+
+:Section
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Chapter ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Chapter ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Summary
+	a owl:Class ;
+	rdfs:subClassOf :Section ;
+	.
+
+:Table
+	a owl:Class ;
+	rdfs:subClassOf :ContentStucturalComponent ;
+	.
+
+:TableOfContent
+	a owl:Class ;
+	rdfs:subClassOf
+		:ContentStucturalComponent ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:allValuesFrom :Book ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty :isPartOf ;
+			owl:onClass :Book ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	.
+
+:Topic
+	a owl:Class ;
+	.
+
+:WhatIsaWeb
+	a
+		owl:NamedIndividual ,
+		:Section
+		;
+	rdfs:label "What Is a Web"@en ;
+	.
+
+:WhatIstheSemanticWeb
+	a
+		owl:NamedIndividual ,
+		:Chapter
+		;
+	rdfs:label "What Is the Semantic Web"@en ;
+	.
+
+:broadcastedAs
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf :manifestedAs ;
+	.
+
+:hasPart
+	a owl:ObjectProperty ;
+	owl:inverseOf :hasPart ;
+	.
+
+:identifiedBy
+	a owl:ObjectProperty ;
+	owl:inverseOf :identifies ;
+	.
+
+:identifies
+	a owl:ObjectProperty ;
+	.
+
+:isPartOf
+	a owl:ObjectProperty ;
+	.
+
+:manifestedAs
+	a owl:ObjectProperty ;
+	.
+
+:printedAs
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf :manifestedAs ;
+	.
+
+:publishedBy
+	a owl:ObjectProperty ;
+	.
+
+[]
+	a owl:AllDisjointClasses ;
+	owl:members (
+		:Acknowledgement
+		:AuthorBio
+		:Bibliography
+		:BookPart
+		:Chapter
+		:Example
+		:Exercise
+		:Figure
+		:Footnote
+		:Foreword
+		:Index
+		:Paragraph
+		:Preface
+		:Section
+		:Table
+		:TableOfContent
+	) ;
+	.
+

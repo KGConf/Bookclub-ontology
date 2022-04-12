@@ -1,0 +1,113 @@
+# baseURI: https://www.notion.so/047f2d582d53426d91b173643f357c36
+
+@base <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
+@prefix : <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
+@prefix bob: <https://www.notion.so/047f2d582d53426d91b173643f357c36#> .
+@prefix bobg: <https://www.notion.so/047f2d582d53426d91b173643f357c36> .
+@prefix dean: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#> .
+@prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8> .
+@prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#> .
+@prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c> .
+@prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#> .
+@prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699> .
+@prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#> .
+@prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c> .
+@prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#> .
+@prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f> .
+@prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#> .
+@prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#> .
+@prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766> .
+@prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#> .
+@prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.notion.so/047f2d582d53426d91b173643f357c36>
+	a owl:Ontology ;
+	.
+
+bob:Book
+	a owl:Class ;
+	.
+
+bob:BookAcknowledgement
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:BookAuthorBio
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:BookBibliography
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:BookContent
+	a owl:Class ;
+	rdfs:subClassOf bob:Book ;
+	rdfs:label "Book Content" ;
+	rdfs:comment "This is the content of the book as opposed to metadata" ;
+	.
+
+bob:BookForward
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:BookIndex
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:BookPreface
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:Chapter
+	a owl:Class ;
+	rdfs:subClassOf bob:BookContent ;
+	.
+
+bob:FundamentalConcept
+	a owl:Class ;
+	rdfs:subClassOf bob:SummarySection ;
+	.
+
+bob:SubChapter
+	a owl:Class ;
+	rdfs:subClassOf bob:Chapter ;
+	.
+
+bob:SummarySection
+	a owl:Class ;
+	rdfs:subClassOf bob:SubChapter ;
+	.
+
+bob:hasHardCoverISBN
+	a owl:DatatypeProperty ;
+	.
+
+bob:hasLabel
+	a owl:DatatypeProperty ;
+	.
+
+bob:hasOrderID
+	a owl:DatatypeProperty ;
+	.
+
+bob:hasPublishedDate
+	a owl:DatatypeProperty ;
+	.
+
+bob:hasTitle
+	a owl:DatatypeProperty ;
+	.
+

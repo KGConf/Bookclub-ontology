@@ -1,0 +1,26 @@
+prefix owl:   <http://www.w3.org/2002/07/owl#> 
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix xsd:   <hg:ttp://www.w3.org/2001/XMLSchema#> 
+prefix bob: <https://www.notion.so/047f2d582d53426d91b173643f357c36#>
+prefix bobg: <https://www.notion.so/047f2d582d53426d91b173643f357c36>
+prefix dean: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8#>
+prefix deang: <https://www.notion.so/b12437fdb9f24d55814910652aa26cb8>
+prefix glenn: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c#>
+prefix glenng: <https://www.notion.so/ee4711b28c3d4691a53bcb0c45ffa71c>
+prefix keith: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699#>
+prefix keithg: <https://www.notion.so/ff48a9a4250e46d58f0ce68b6ff1d699>
+prefix larry: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c#>
+prefix larryg: <https://www.notion.so/4c072eb44b78474688bdaabc9821300c>
+prefix matei: <https://www.notion.so/784955763883483e95787f9715db174f#>
+prefix mateig: <https://www.notion.so/784955763883483e95787f9715db174f>
+prefix matthias: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4#>
+prefix matthiasg: <https://www.notion.so/4133c15726be43c6af38406d2e8295f4>
+prefix robert: <https://www.notion.so/9eec384012464c599d1174b148939766#>
+prefix robertg: <https://www.notion.so/9eec384012464c599d1174b148939766>
+prefix teodora: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113#>
+prefix teodorag: <https://www.notion.so/9d81f4f88dc74013a5ef0195aad0f113>
+
+
+construct {?s ?p ?o}
+where {graph larryg: {?s ?p ?o}}
