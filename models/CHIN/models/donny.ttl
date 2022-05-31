@@ -1,9 +1,19 @@
-@prefix donny:  <https://donnywinston.com/kgc-bookclub-ontology#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+# baseURI: https://donnywinston.com/kgc-bookclub-ontology#
 
-donny: a owl:Ontology .
+@base <https://donnywinston.com/kgc-bookclub-ontology#> .
+@prefix donny: <https://donnywinston.com/kgc-bookclub-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
-donny:Idea a owl:Class .
+<#>
+	a owl:Ontology ;
+	rdfs:comment "Made by Donny" ;
+	.
 
-donny: rdfs:comment "Made by Donny" .
+donny:Idea
+	a owl:Class ;
+	rdfs:comment "THE IDEA IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE IDEA OR THE USE OR OTHER DEALINGS IN THE IDEA." ;
+	.
+
